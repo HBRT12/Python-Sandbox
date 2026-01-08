@@ -61,5 +61,3 @@ b27.pack()
 b28.pack()
 b29.pack()
 b30.pack()
-
-print("penis")
