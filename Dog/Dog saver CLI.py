@@ -1,13 +1,14 @@
 import json  # Needed for saving data
 import os
-
+import time
 try:
     with open("./Dog/Stored_dogs.json") as dogs:  # Imports data from JSON
         stored_dog_dict = json.load(dogs)
-        print("Successfully loaded stored data from JSON file")
+        print("Successfully loaded stored data from JSON file.")
 except:
     stored_dog_dict = {}  # Creates empty dict if JSON file is empty/not found
-    print("Error loading stored data from JSON file")
+    print("Error loading stored data from JSON file.")
+time.sleep(1)
 
 def store_dog(dog_dict, dog_data):
     dog_dict[dog_data[0]] = {"Age": dog_data[1],  # Adds user's dog information to imported dictionary
@@ -48,3 +49,4 @@ def display_info(user_info):
 user_inputs = get_user_info()  # Gets information from user
 store_dog(stored_dog_dict, user_inputs)  # Stores information onto the dictionary
 upload_dog_data(stored_dog_dict)  # Stores the dictionary to the JSON file-
+display_info(user_inputs)  # Displays the user's input back to them in a formatted way

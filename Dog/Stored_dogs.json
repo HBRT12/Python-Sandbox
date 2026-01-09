@@ -19,5 +19,19 @@
         "Breed": "Hubert",
         "Fur type": "Surel's hair",
         "Privacy": true
+    },
+    "Theo": {
+        "Age": 11,
+        "Age in dog years": 77,
+        "Breed": "Norway",
+        "Fur type": "Brown",
+        "Privacy": false
+    },
+    "": {
+        "Age": "No age provided",
+        "Age in dog years": "No age providedNo age providedNo age providedNo age providedNo age providedNo age providedNo age provided",
+        "Breed": "",
+        "Fur type": "",
+        "Privacy": true
     }
 }
