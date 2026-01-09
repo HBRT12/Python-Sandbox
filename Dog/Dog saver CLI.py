@@ -1,12 +1,13 @@
 import json  # Needed for saving data
+import os
 
-
-with open("Stored_dogs.json") as dogs:  # Imports data from JSON
-    try:
+try:
+    with open("./Dog/Stored_dogs.json") as dogs:  # Imports data from JSON
         stored_dog_dict = json.load(dogs)
-    except:
-        stored_dog_dict = {}  # Creates empty dict if JSON file is empty/not found
-        print("Error loading stored data from JSON file")
+        print("Successfully loaded stored data from JSON file")
+except:
+    stored_dog_dict = {}  # Creates empty dict if JSON file is empty/not found
+    print("Error loading stored data from JSON file")
 
 def store_dog(dog_dict, dog_data):
     dog_dict[dog_data[0]] = {"Age": dog_data[1],  # Adds user's dog information to imported dictionary
@@ -30,10 +31,14 @@ def get_user_info():
         return [dog_name.capitalize(), age, age*7, breed.capitalize(), fur_type.capitalize(), True]
 
 def upload_dog_data(dog_dict):
-    with open("Stored_dogs.json","w") as dogs_file:  # Dumps dictionary with new entry to save file
+    with open("./Dog/Stored_dogs.json","w") as dogs_file:  # Dumps dictionary with new entry to save file
         json.dump(dog_dict, dogs_file, indent=4)
 
 def display_info(user_info):
+    try:
+        os.system("clear")  # Clears terminal for Linux/Mac
+    except:
+        os.system("cls")  # Clears terminal for Windows
     print(f"""Name: {user_info[0]}
     Age:{user_info[1]} (or {user_info[2]} in human years)
     Breed: {user_info[3]}
@@ -42,4 +47,4 @@ def display_info(user_info):
 
 user_inputs = get_user_info()  # Gets information from user
 store_dog(stored_dog_dict, user_inputs)  # Stores information onto the dictionary
-upload_dog_data(stored_dog_dict)  # Stores the dictionary to the JSON file
+upload_dog_data(stored_dog_dict)  # Stores the dictionary to the JSON file-

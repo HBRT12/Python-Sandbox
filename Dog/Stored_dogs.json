@@ -1,0 +1,23 @@
+{
+    "Jerry": {
+        "Age": 5,
+        "Age in dog years": 35,
+        "Breed": "Cocker spaniel",
+        "Fur type": "Soft",
+        "Privacy": false
+    },
+    "Sammy": {
+        "Age": 2,
+        "Age in dog years": 14,
+        "Breed": "German",
+        "Fur type": "Gassy",
+        "Privacy": false
+    },
+    "Peter": {
+        "Age": 35,
+        "Age in dog years": 245,
+        "Breed": "Hubert",
+        "Fur type": "Surel's hair",
+        "Privacy": true
+    }
+}
