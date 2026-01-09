@@ -1,4 +1,5 @@
 import json  # Needed for loading data
+
 try:
     with open("./Dog/Stored_dogs.json") as dogs:  # Imports data from JSON
         stored_dog_dict = json.load(dogs)
@@ -7,16 +8,14 @@ except:
     print("Error loading stored data from JSON file")
 
 def display_dog_info(dog_dict):
-    for dog_name, dog_info in dog_dict.items():  # Loops through each dog in the dictionary
-        if dog_info["Privacy"] == False:  # Checks if user wanted their data hidden
-            print(f"""Name: {dog_name}
-    Age: {dog_info['Age']} (or {dog_info['Age in dog years']} in human years)
-    Breed: {dog_info['Breed']}
-    Fur type: {dog_info['Fur type']}
-    Keep data private: {dog_info['Privacy']}""")  # Displays all info if not private
-            print("-"*20)  # Separator between dogs
+    for each in stored_dog_dict:
+        if dog_dict[each]["Privacy"] is False:  # Checks if privacy is set to False
+            print(f"""Dog Name: {each}
+                Age: {dog_dict[each]['Age']}
+                Age in dog years: {dog_dict[each]['Age in dog years']}
+                Breed: {dog_dict[each]['Breed']}
+                Fur type: {dog_dict[each]['Fur type']}""")  # Displays each dog's information
         else:
-            print(f"Name: {dog_name} - Data is private and cannot be displayed.")  # Message if data is private
-            print("-"*20)  # Separator between dogs
+            print(f"Dog Name: {each[0]}{'*'*(len(dog_dict[each])-1)} - Data is set to private and cannot be displayed.")  # Message if privacy is True
 
 display_dog_info(stored_dog_dict)  # Calls function to display dog info

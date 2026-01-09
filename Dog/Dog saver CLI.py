@@ -1,6 +1,7 @@
 import json  # Needed for saving data
 import os
 import time
+
 try:
     with open("./Dog/Stored_dogs.json") as dogs:  # Imports data from JSON
         stored_dog_dict = json.load(dogs)
