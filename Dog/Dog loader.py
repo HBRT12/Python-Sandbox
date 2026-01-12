@@ -17,5 +17,6 @@ def display_dog_info(dog_dict):
                 Fur type: {dog_dict[each]['Fur type']}""")  # Displays each dog's information
         else:
             print(f"Dog Name: {each[0]}{'*'*(len(dog_dict[each])-1)} - Data is set to private and cannot be displayed.")  # Message if privacy is True
+        print("\n"+"-"*40+"\n")  # Formatting line between entries
 
 display_dog_info(stored_dog_dict)  # Calls function to display dog info
