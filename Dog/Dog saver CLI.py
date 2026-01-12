@@ -22,15 +22,17 @@ def get_user_info():
     dog_name = input("What is your dog called>>> ")
     try:
         age = int(input("How old is your dog?>>> "))
+        age_in_dog_years = age * 7  # Calculates age in dog years
     except:  # Prevents crash from inputting non-int characters
         age = "No age provided"
+        age_in_dog_years = "N/A"
     breed = input("What breed is your dog?>>> ")
     fur_type = input("What fur type does your dog have?>>> ")
     privacy = input("Do you want your data hidden when loaded?>>> ")
     if privacy.lower() in ["no", "nope", "n", "nah"]:  # Check if user doesn't want input hidden when loaded in Dog loader.py
-        return [dog_name.capitalize(), age, age*7, breed.capitalize(), fur_type.capitalize(), False]
+        return [dog_name.capitalize(), age, age_in_dog_years, breed.capitalize(), fur_type.capitalize(), False]
     else:  # Returns True or False as last entry, depending on privacy input
-        return [dog_name.capitalize(), age, age*7, breed.capitalize(), fur_type.capitalize(), True]
+        return [dog_name.capitalize(), age, age_in_dog_years, breed.capitalize(), fur_type.capitalize(), True]
 
 def upload_dog_data(dog_dict):
     with open("./Dog/Stored_dogs.json","w") as dogs_file:  # Dumps dictionary with new entry to save file
