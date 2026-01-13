@@ -36,7 +36,7 @@ def get_user_info():
 
 def upload_dog_data(dog_dict):
     with open("./Dog/Stored_dogs.json","w") as dogs_file:  # Dumps dictionary with new entry to save file
-        json.dump(dog_dict, dogs_file, indent=4)
+        json.dump(dog_dict, dogs_file, indent=4, sort_keys=True)
 
 def display_info(user_info):
     try:
