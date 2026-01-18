@@ -18,7 +18,19 @@ def confirm(user_inputs):
     confirmation_window = tk.Toplevel(root)
     confirmation_window.geometry("300x200")
     info_display = tk.Label(confirmation_window,
-                            text=user_inputs).pack()
+                            text=f"""You have entered the following data:
+                            Name: {user_inputs[0]}
+                            Age: {user_inputs[1]}
+                            Breed: {user_inputs[2]}
+                            Fur type: {user_inputs[3]}
+                            Private data: {user_inputs[4]}
+                            Submit?""").pack()
+    yes_button = tk.Button(confirmation_window,
+                           text="Yes",
+                           activebackground="green").pack(pady=5)
+    no_button = tk.Button(confirmation_window,
+                          text="No",
+                          activebackground="red").pack(pady=5)
 
 
 root = tk.Tk()  # Defining root parameters
@@ -39,11 +51,11 @@ breed = tk.Entry(root,  # Entry for dog's breed
                  textvariable = dog_breed).pack(pady=5)
 
 dog_fur_type = tk.StringVar(value="Fur type")
-fur_type = tk.Entry(root,
+fur_type = tk.Entry(root,  # Entry for dog's fur type
                     textvariable=dog_fur_type).pack(pady=5)
 
 dog_privacy = tk.BooleanVar(value=False)
-privacy = tk.Checkbutton(root,
+privacy = tk.Checkbutton(root,  # Checkbox to indicate if data is to be kept private
                          text="Hide my response when loaded",
                          onvalue=True,
                          offvalue=False,
@@ -51,7 +63,7 @@ privacy = tk.Checkbutton(root,
 
 enter = tk.Button(root,
                   text="Submit",
-                  command= lambda: confirm([dog_name.get(), dog_age.get(), dog_breed.get(), dog_fur_type.get(), dog_privacy.get()])).pack(pady=5)
+                  command= lambda: confirm([dog_name.get().capitalize(), dog_age.get(), dog_breed.get().capitalize(), dog_fur_type.get().capitalize(), dog_privacy.get()])).pack(pady=5)
 
 dog_data = get_database()
 root.mainloop()
