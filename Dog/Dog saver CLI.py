@@ -7,8 +7,9 @@ try:
         stored_dog_dict = json.load(dogs)
         print("Successfully loaded stored data from JSON file.")
 except:
-    stored_dog_dict = {}  # Creates empty dict if JSON file is empty/not found
-    print("Error loading stored data from JSON file.")
+    with open("Stored_dogs.json") as dogs:  # Imports data from JSON
+        stored_dog_dict = json.load(dogs)
+        print("Successfully loaded stored data from JSON file.")
 time.sleep(1)
 
 def store_dog(dog_dict, dog_data):
