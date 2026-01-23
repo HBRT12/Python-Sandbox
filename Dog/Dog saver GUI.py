@@ -16,23 +16,30 @@ def get_database():
 def confirm(user_inputs):
     root.withdraw()  # Hides root window
     confirmation_window = tk.Toplevel(root)
-    confirmation_window.geometry("300x200")
+    confirmation_window.geometry("330x200")
     info_display = tk.Label(confirmation_window,
                             text=f"""You have entered the following data:
-                            Name: {user_inputs[0]}
-                            Age: {user_inputs[1]}
-                            Breed: {user_inputs[2]}
-                            Fur type: {user_inputs[3]}
-                            Private data: {user_inputs[4]}
-                            Submit?""").pack()
+    Name: {user_inputs[0]}
+    Age: {user_inputs[1]}
+    Breed: {user_inputs[2]}
+    Fur type: {user_inputs[3]}
+    Private data: {user_inputs[4]}
+    Submit?""").grid(row=0, column=1)
     yes_button = tk.Button(confirmation_window,
                            text="Yes",
-                           activebackground="green").pack(pady=5)
+                           activebackground="green",
+                           font=("Arial", 20)).grid(row=1, column=0)
     no_button = tk.Button(confirmation_window,
                           text="No",
-                          activebackground="red").pack(pady=5)
+                          activebackground="red",
+                          font=("Arial", 20),
+                          command= lambda: confirm_no(confirmation_window, root)).grid(row=1, column=2)
 
-
+def confirm_no(confirmwindow, rootwindow):
+    global confirmation_window
+    confirmwindow.destroy()
+    rootwindow.deiconify()
+    
 root = tk.Tk()  # Defining root parameters
 root.config(bg="gray")
 root.title("Dog Database Saver")
