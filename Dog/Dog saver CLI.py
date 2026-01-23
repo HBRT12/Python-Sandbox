@@ -40,10 +40,7 @@ def upload_dog_data(dog_dict):
         json.dump(dog_dict, dogs_file, indent=4, sort_keys=True)
 
 def display_info(user_info):
-    try:
-        os.system("clear")  # Clears terminal for Linux/Mac
-    except:
-        os.system("cls")  # Clears terminal for Windows
+    os.system('cls' if os.name == 'nt' else 'clear')  # Clears terminal for better readability
     print(f"""Name: {user_info[0]}
     Age:{user_info[1]} (or {user_info[2]} in human years)
     Breed: {user_info[3]}
