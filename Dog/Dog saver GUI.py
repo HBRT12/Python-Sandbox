@@ -1,16 +1,19 @@
 import tkinter as tk  # Needed for GUI creation
+from tkinter import messagebox  # Needed to show info and error boxes
 import json  # Needed to import the database
+import uuid  # Needed to create unique IDs for each dog entry
+
 
 def get_database():
     try:
         with open("./Dog/Stored_dogs.json", "r") as file:  # works in GH codespace
             data = json.load(file)
-            print("data loaded!")
+            print("data loaded1!")
             return data
     except:
         with open("Stored_dogs.json", "r") as file:  # works locally
             data = json.load(file)
-            print("data loaded!")
+            print("data loaded2!")
             return data
 
 def confirm(user_inputs):
@@ -21,14 +24,16 @@ def confirm(user_inputs):
                             text=f"""You have entered the following data:
     Name: {user_inputs[0]}
     Age: {user_inputs[1]}
-    Breed: {user_inputs[2]}
-    Fur type: {user_inputs[3]}
-    Private data: {user_inputs[4]}
+    Age in dog years: {user_inputs[2]}
+    Breed: {user_inputs[3]}
+    Fur type: {user_inputs[4]}
+    Private data: {user_inputs[5]}
     Submit?""").grid(row=0, column=1)
     yes_button = tk.Button(confirmation_window,
                            text="Yes",
                            activebackground="green",
-                           font=("Arial", 20)).grid(row=1, column=0)
+                           font=("Arial", 20),
+                           command=lambda: confirm_yes(confirmation_window, root, user_inputs, dog_data)).grid(row=1, column=0)
     no_button = tk.Button(confirmation_window,
                           text="No",
                           activebackground="red",
@@ -36,9 +41,15 @@ def confirm(user_inputs):
                           command= lambda: confirm_no(confirmation_window, root)).grid(row=1, column=2)
 
 def confirm_no(confirmwindow, rootwindow):
-    global confirmation_window
     confirmwindow.destroy()
     rootwindow.deiconify()
+
+def confirm_yes(confirmwindow, rootwindow, userinfo, database):
+    try:
+        with open("Stored_dogs.json", "w") as file:
+            messagebox.showinfo("Response saved!", f"Your response was saved successfully. You may now close the program or submit another response. Response ID: {userinfo[6]}")
+    except:
+        messagebox.showerror("Error: Failed to save", "The program has failed to upload your data. Your response hasn't been saved!")
     
 root = tk.Tk()  # Defining root parameters
 root.config(bg="gray")
@@ -70,7 +81,13 @@ privacy = tk.Checkbutton(root,  # Checkbox to indicate if data is to be kept pri
 
 enter = tk.Button(root,
                   text="Submit",
-                  command= lambda: confirm([dog_name.get().capitalize(), dog_age.get(), dog_breed.get().capitalize(), dog_fur_type.get().capitalize(), dog_privacy.get()])).pack(pady=5)
+                  command= lambda: confirm([dog_name.get().capitalize(),
+                                            int(dog_age.get()) if dog_age.get().isdigit() else "No age provided",
+                                            int(dog_age.get())*7 if dog_age.get().isdigit() else "N/A",
+                                            dog_breed.get().capitalize(),
+                                            dog_fur_type.get().capitalize(), 
+                                            dog_privacy.get(),
+                                            uuid.uuid4()])).pack(pady=5)
 
 dog_data = get_database()
 root.mainloop()
