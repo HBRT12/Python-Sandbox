@@ -2,6 +2,8 @@ import json
 import random
 import uuid
 
+sample_data = {}
+
 names = [
     "Buddy", "Bella", "Charlie", "Lucy", "Max",
     "Daisy", "Bailey", "Luna", "Cooper", "Molly",
@@ -58,8 +60,13 @@ def confirmed():
     else:
         return False
 
-def create_sample_data():
-    for i in range(10):
+def store_data(dict):
+    input("Press enter to overwrite stored_dogs.json with generated data...")
+    with open("./Dog/Stored_dogs.json", "w") as file:
+        json.dump(dict, file, indent=4)
+
+def create_sample_data(entry_count, dict=sample_data):
+    for i in range(entry_count):
         dog_id = str(uuid.uuid4())  # Generating unique ID
         print(f"\nDog ID: {dog_id}")
         
@@ -84,8 +91,18 @@ def create_sample_data():
         else:
             privacy = False
         print(f"Privacy: {privacy}")
+        
+        dict[dog_id] = {
+            "Name": name,
+            "Age": age,
+            "Age in dog years": age_dog_years,
+            "Breed": random.choice(breeds),  # Randomly selecting a breed
+            "Fur type": random.choice(fur_types),  # Randomly selecting a fur type
+            "Privacy": privacy
+        }
         print("\n" + "-" * 20)
+    store_data(dict)
 
 if confirmed():
-    create_sample_data()  # Create sample data if user confirmed
+    create_sample_data(int(input("How many entries do you want to generate>>> ")))  # Create sample data if user confirmed
     input("Press enter to exit...")
