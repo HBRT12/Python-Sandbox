@@ -66,30 +66,45 @@ def confirm_yes(confirmwindow, rootwindow, userinfo, database):  # If user selec
 root = tk.Tk()  # Defining root parameters
 root.config(bg="gray")
 root.title("Dog Database Saver")
-root.geometry("200x200")
+root.geometry("300x200")
 
-dog_name = tk.StringVar(value="Name")
+dog_name = tk.StringVar(value="")
+namelabel = tk.Label(root,  # Label for dog's name
+                     text="Dog's name:",
+                     bg="gray").grid(row=0, column=0, pady=5)
 name = tk.Entry(root,  # Entry for dog's name
-                textvariable = dog_name).pack(pady=5)
+                textvariable = dog_name).grid(row=0, column=1, pady=5)
 
-dog_age = tk.StringVar(value="Age")
-age = tk.Entry(root,  # Entry for dog's name
-               textvariable = dog_age).pack(pady=5)
+dog_age = tk.StringVar(value="")
+agelabel = tk.Label(root,  # Label for dog's age
+                    text="Dog's age:",
+                    bg="gray").grid(row=1, column=0, pady=5)
+age = tk.Entry(root,  # Entry for dog's age
+               textvariable = dog_age).grid(row=1, column=1, pady=5)
 
-dog_breed = tk.StringVar(value="Breed")
+dog_breed = tk.StringVar(value="")
+breedlabel = tk.Label(root,  # Label for dog's breed
+                      text="Dog's breed:",
+                      bg="gray").grid(row=2, column=0, pady=5)
 breed = tk.Entry(root,  # Entry for dog's breed
-                 textvariable = dog_breed).pack(pady=5)
+                 textvariable = dog_breed).grid(row=2, column=1, pady=5)
 
-dog_fur_type = tk.StringVar(value="Fur type")
+furtypelabel = tk.Label(root,  # Label for dog's fur type
+                        text="Dog's fur type:",
+                        bg="gray").grid(row=3, column=0, pady=5)
+dog_fur_type = tk.StringVar(value="")
 fur_type = tk.Entry(root,  # Entry for dog's fur type
-                    textvariable=dog_fur_type).pack(pady=5)
+                    textvariable=dog_fur_type).grid(row=3, column=1, pady=5)
 
 dog_privacy = tk.BooleanVar(value=False)
-privacy = tk.Checkbutton(root,  # Checkbox to indicate if data is to be kept private
-                         text="Hide my response when loaded",
+privacylabel = tk.Label(root,  # Label for privacy checkbox
+                        text="Keep data private:",
+                        bg="gray").grid(row=4, column=0, pady=5)
+privacy = tk.Checkbutton(root,  # Checkbox to indicate if data is to be kept private,
                          onvalue=True,
                          offvalue=False,
-                         variable=dog_privacy).pack(pady=5)
+                         variable=dog_privacy,
+                         bg="gray").grid(row=4, column=1, pady=5)
 
 enter = tk.Button(root,
                   text="Submit",
@@ -99,7 +114,7 @@ enter = tk.Button(root,
                                             dog_breed.get().capitalize(),
                                             dog_fur_type.get().capitalize(), 
                                             dog_privacy.get(),
-                                            uuid.uuid4()])).pack(pady=5)
+                                            uuid.uuid4()])).grid(row=5, column=1, pady=10)  # Submit button
 
 dog_data = get_database()
 root.mainloop()
