@@ -1,58 +1,802 @@
 {
-    "Al": {
-        "Age": 4,
-        "Age in dog years": 28,
-        "Breed": "Cocker spaniel",
+    "ae008353-ae30-4fe1-8cb6-3b03a71be02e": {
+        "Name": "King",
+        "Age": 6,
+        "Age in dog years": 42,
+        "Breed": "Siberian Husky",
+        "Fur type": "Silky",
+        "Privacy": false
+    },
+    "e3d903a6-9a76-46e2-a5e3-08f0d47db3c5": {
+        "Name": "Ginger",
+        "Age": 7,
+        "Age in dog years": 49,
+        "Breed": "Doberman Pinscher",
+        "Fur type": "Corded",
+        "Privacy": false
+    },
+    "eafa4723-2178-462e-b881-6c9de126daa6": {
+        "Name": "Mia",
+        "Age": 7,
+        "Age in dog years": 49,
+        "Breed": "Boxer",
+        "Fur type": "Wiry",
+        "Privacy": false
+    },
+    "4ba58efb-77fa-4944-b80f-ae0b98a99ee3": {
+        "Name": "Harley",
+        "Age": 8,
+        "Age in dog years": 56,
+        "Breed": "Great Dane",
         "Fur type": "Short",
         "Privacy": false
     },
-    "Jerry": {
-        "Age": 5,
-        "Age in dog years": 35,
-        "Breed": "Cocker spaniel",
-        "Fur type": "Soft",
+    "c0d26193-6333-4c2c-89dc-a5fd8d610cf5": {
+        "Name": "Moose",
+        "Age": 3,
+        "Age in dog years": 21,
+        "Breed": "Poodle",
+        "Fur type": "Short",
         "Privacy": false
     },
-    "Lucky": {
-        "Age": "No age provided",
-        "Age in dog years": "N/A",
-        "Breed": "Corgi",
-        "Fur type": "Super fluffy",
+    "f2fd3f0c-840f-40b4-b0dd-0beaf273e12b": {
+        "Name": "Ellie",
+        "Age": 7,
+        "Age in dog years": 49,
+        "Breed": "Poodle",
+        "Fur type": "Hairless",
         "Privacy": false
     },
-    "Peter": {
-        "Age": 35,
-        "Age in dog years": 245,
-        "Breed": "Hubert",
-        "Fur type": "Surel's hair",
+    "0629ab25-ecab-4edd-996e-5a1400e98c1a": {
+        "Name": "Zeus",
+        "Age": 16,
+        "Age in dog years": 112,
+        "Breed": "Cavalier King Charles Spaniel",
+        "Fur type": "Rough",
+        "Privacy": false
+    },
+    "7aacadb9-b3fb-468a-a785-985876db1069": {
+        "Name": "Molly",
+        "Age": 8,
+        "Age in dog years": 56,
+        "Breed": "Doberman Pinscher",
+        "Fur type": "Hairless",
+        "Privacy": false
+    },
+    "afb9d8a4-3f93-46b6-8291-de101c0f3918": {
+        "Name": "Ace",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Great Dane",
+        "Fur type": "Short",
+        "Privacy": false
+    },
+    "f31812b1-da23-4579-bbb6-9d9959e83825": {
+        "Name": "Sammy",
+        "Age": 13,
+        "Age in dog years": 91,
+        "Breed": "Beagle",
+        "Fur type": "Double coat",
+        "Privacy": false
+    },
+    "ed5a0995-5b2e-4cde-ae8b-5c77da38d35f": {
+        "Name": "Zoey",
+        "Age": 2,
+        "Age in dog years": 14,
+        "Breed": "Poodle",
+        "Fur type": "Curly",
         "Privacy": true
     },
-    "Ruff": {
+    "064d039a-f001-409c-a707-6b14ef79a7d5": {
+        "Name": "Honey",
+        "Age": 4,
+        "Age in dog years": 28,
+        "Breed": "German Shepherd",
+        "Fur type": "Medium",
+        "Privacy": false
+    },
+    "f2d9ed8f-f5ac-4859-ad7e-e3bb087f0f1a": {
+        "Name": "Casey",
+        "Age": 8,
+        "Age in dog years": 56,
+        "Breed": "Mastiff",
+        "Fur type": "Hairless",
+        "Privacy": true
+    },
+    "75dad72e-1545-43d9-8f95-75ba3bcb0eea": {
+        "Name": "Bear",
+        "Age": 7,
+        "Age in dog years": 49,
+        "Breed": "Dachshund",
+        "Fur type": "Silky",
+        "Privacy": false
+    },
+    "bd10f85e-6169-47bb-803f-1b9e48d868e5": {
+        "Name": "Bailey",
+        "Age": 8,
+        "Age in dog years": 56,
+        "Breed": "Boxer",
+        "Fur type": "Rough",
+        "Privacy": false
+    },
+    "2cbbf097-0834-4bad-9ce2-6888e6205723": {
+        "Name": "Nala",
+        "Age": 5,
+        "Age in dog years": 35,
+        "Breed": "Golden Retriever",
+        "Fur type": "Wiry",
+        "Privacy": true
+    },
+    "821a2ee0-fd3f-4132-816b-0aa4ca1d48ba": {
+        "Name": "Finn",
+        "Age": 5,
+        "Age in dog years": 35,
+        "Breed": "Siberian Husky",
+        "Fur type": "Medium",
+        "Privacy": false
+    },
+    "9e0109ed-3b15-49f6-b7aa-421e30de4ad6": {
+        "Name": "Bentley",
+        "Age": 7,
+        "Age in dog years": 49,
+        "Breed": "Cavalier King Charles Spaniel",
+        "Fur type": "Double coat",
+        "Privacy": false
+    },
+    "364e2abe-d056-43fe-822c-7953f0d82af1": {
+        "Name": "Duke",
+        "Age": 13,
+        "Age in dog years": 91,
+        "Breed": "Rottweiler",
+        "Fur type": "Double coat",
+        "Privacy": false
+    },
+    "b337cc6b-9488-4a6f-a334-bc9fc9adc04e": {
+        "Name": "Tank",
         "Age": 2,
         "Age in dog years": 14,
-        "Breed": "Husky",
+        "Breed": "Golden Retriever",
+        "Fur type": "Rough",
+        "Privacy": false
+    },
+    "42d35482-b34a-4117-b3bf-5720b487d58f": {
+        "Name": "Rex",
+        "Age": 4,
+        "Age in dog years": 28,
+        "Breed": "Yorkshire Terrier",
+        "Fur type": "Wiry",
+        "Privacy": false
+    },
+    "cf345df7-c5f1-4440-a140-7646fba915d6": {
+        "Name": "Hank",
+        "Age": 4,
+        "Age in dog years": 28,
+        "Breed": "Siberian Husky",
+        "Fur type": "Hairless",
+        "Privacy": false
+    },
+    "06593ea2-523f-439b-ae9c-8416028439b9": {
+        "Name": "Murphy",
+        "Age": 2,
+        "Age in dog years": 14,
+        "Breed": "Dachshund",
         "Fur type": "Short",
         "Privacy": false
     },
-    "Sammy": {
+    "b92304d2-fc2e-475a-aae4-af1323584926": {
+        "Name": "Lucy",
         "Age": 2,
         "Age in dog years": 14,
-        "Breed": "German",
-        "Fur type": "Gassy",
+        "Breed": "Labrador Retriever",
+        "Fur type": "Hairless",
         "Privacy": false
     },
-    "Theo": {
+    "5f77ece7-1c4c-4f8f-a4c5-26f92d4d4175": {
+        "Name": "Lulu",
+        "Age": "No age provided",
+        "Age in dog years": "N/A",
+        "Breed": "Shih Tzu",
+        "Fur type": "Curly",
+        "Privacy": false
+    },
+    "3c18bd19-3858-4e12-bdd1-3f9e555f67a5": {
+        "Name": "Nala",
+        "Age": 2,
+        "Age in dog years": 14,
+        "Breed": "Australian Shepherd",
+        "Fur type": "Corded",
+        "Privacy": false
+    },
+    "729e86a1-8353-47c3-874a-5c6099763da9": {
+        "Name": "Sophie",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Australian Shepherd",
+        "Fur type": "Silky",
+        "Privacy": true
+    },
+    "157a1de8-82ed-4c69-9d37-5d6fd6df3848": {
+        "Name": "Rocky",
+        "Age": 6,
+        "Age in dog years": 42,
+        "Breed": "Havanese",
+        "Fur type": "Corded",
+        "Privacy": true
+    },
+    "4a5f6e0d-d788-4ce8-b15c-42d15f9f19e1": {
+        "Name": "Max",
+        "Age": 7,
+        "Age in dog years": 49,
+        "Breed": "Poodle",
+        "Fur type": "Short",
+        "Privacy": false
+    },
+    "198191bf-1925-4f28-a09c-9d757958df14": {
+        "Name": "Finn",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Bulldog",
+        "Fur type": "Long",
+        "Privacy": true
+    },
+    "86710c92-1bab-43f9-98c9-25dd4d9f2b08": {
+        "Name": "Bruno",
+        "Age": 6,
+        "Age in dog years": 42,
+        "Breed": "Doberman Pinscher",
+        "Fur type": "Hairless",
+        "Privacy": false
+    },
+    "4c2c48e4-d089-4584-ba51-d2e17e1c3540": {
+        "Name": "Roxy",
+        "Age": 2,
+        "Age in dog years": 14,
+        "Breed": "Shih Tzu",
+        "Fur type": "Short",
+        "Privacy": false
+    },
+    "66fb2a45-5b55-472b-bf8e-148afbccc305": {
+        "Name": "Bear",
+        "Age": 5,
+        "Age in dog years": 35,
+        "Breed": "Labrador Retriever",
+        "Fur type": "Long",
+        "Privacy": true
+    },
+    "e53bcb68-79f3-4a83-bfa6-9a74fefe433a": {
+        "Name": "Archie",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Beagle",
+        "Fur type": "Wiry",
+        "Privacy": false
+    },
+    "6a9179fb-76b1-45d7-bb05-2635708e2b63": {
+        "Name": "Chloe",
+        "Age": 3,
+        "Age in dog years": 21,
+        "Breed": "Boxer",
+        "Fur type": "Corded",
+        "Privacy": false
+    },
+    "b02e6ae4-63ea-443c-a6eb-e97b181a0274": {
+        "Name": "Milo",
+        "Age": 7,
+        "Age in dog years": 49,
+        "Breed": "Great Dane",
+        "Fur type": "Rough",
+        "Privacy": false
+    },
+    "de897818-0ac7-4176-9bab-fcfd92f598d1": {
+        "Name": "Archie",
+        "Age": 8,
+        "Age in dog years": 56,
+        "Breed": "Shih Tzu",
+        "Fur type": "Silky",
+        "Privacy": false
+    },
+    "2ab036c6-6351-4a46-91fe-bff8bacc6c43": {
+        "Name": "Rusty",
+        "Age": "No age provided",
+        "Age in dog years": "N/A",
+        "Breed": "Doberman Pinscher",
+        "Fur type": "Rough",
+        "Privacy": false
+    },
+    "62aa3641-6aad-4c9e-841d-6158995ecfe8": {
+        "Name": "Cleo",
+        "Age": 2,
+        "Age in dog years": 14,
+        "Breed": "Australian Shepherd",
+        "Fur type": "Double coat",
+        "Privacy": false
+    },
+    "31852b64-8540-47bf-9dc2-c07274b953ae": {
+        "Name": "Cleo",
+        "Age": 7,
+        "Age in dog years": 49,
+        "Breed": "Shih Tzu",
+        "Fur type": "Short",
+        "Privacy": false
+    },
+    "fee1059a-54f9-4de6-8819-05c179df4553": {
+        "Name": "Archie",
+        "Age": 6,
+        "Age in dog years": 42,
+        "Breed": "Rottweiler",
+        "Fur type": "Silky",
+        "Privacy": false
+    },
+    "69d64abc-cd48-466b-a08d-b17e43880faa": {
+        "Name": "Mia",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Pug",
+        "Fur type": "Hairless",
+        "Privacy": true
+    },
+    "04deeb90-1a01-4d41-ad2a-aedabfdb78c2": {
+        "Name": "Lacey",
+        "Age": 16,
+        "Age in dog years": 112,
+        "Breed": "Doberman Pinscher",
+        "Fur type": "Corded",
+        "Privacy": false
+    },
+    "39e5991e-480a-4371-a497-5c74a93bf417": {
+        "Name": "Riley",
+        "Age": 8,
+        "Age in dog years": 56,
+        "Breed": "Poodle",
+        "Fur type": "Hairless",
+        "Privacy": true
+    },
+    "abf16d83-e8bf-4d8f-a8d6-c8b193f1eee5": {
+        "Name": "Blue",
+        "Age": 6,
+        "Age in dog years": 42,
+        "Breed": "German Shepherd",
+        "Fur type": "Wiry",
+        "Privacy": true
+    },
+    "6e32014b-3fdf-4b91-b3e5-10786bad54d8": {
+        "Name": "Casey",
+        "Age": 7,
+        "Age in dog years": 49,
+        "Breed": "Dachshund",
+        "Fur type": "Wiry",
+        "Privacy": false
+    },
+    "52eca27b-0e75-46e0-9cf8-f5c4aa53dc82": {
+        "Name": "Baxter",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Beagle",
+        "Fur type": "Curly",
+        "Privacy": false
+    },
+    "f47e6c71-e7b9-426f-b4d6-f24c1d37d812": {
+        "Name": "Casey",
+        "Age": 14,
+        "Age in dog years": 98,
+        "Breed": "Poodle",
+        "Fur type": "Wiry",
+        "Privacy": false
+    },
+    "33ab0a1d-d5d1-41d1-bc45-4e558b320c6a": {
+        "Name": "Winnie",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Labrador Retriever",
+        "Fur type": "Wiry",
+        "Privacy": false
+    },
+    "40aa738e-e665-4cca-a94a-203af8ae6f4e": {
+        "Name": "Lulu",
         "Age": 11,
         "Age in dog years": 77,
-        "Breed": "Norway",
-        "Fur type": "Brown",
+        "Breed": "Mastiff",
+        "Fur type": "Double coat",
         "Privacy": false
     },
-    "Void": {
+    "c7313d5f-402f-46bf-9c8d-6b5361e34e38": {
+        "Name": "Maddie",
+        "Age": 8,
+        "Age in dog years": 56,
+        "Breed": "Beagle",
+        "Fur type": "Medium",
+        "Privacy": false
+    },
+    "d02e3945-aad6-40bf-b9ed-e2a0034d447d": {
+        "Name": "Finn",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Boston Terrier",
+        "Fur type": "Short",
+        "Privacy": false
+    },
+    "70eadde3-cc8d-42c9-8d39-c67ef55e799d": {
+        "Name": "Sandy",
+        "Age": 8,
+        "Age in dog years": 56,
+        "Breed": "German Shepherd",
+        "Fur type": "Curly",
+        "Privacy": false
+    },
+    "5a66a0cc-88c9-4744-923c-864a3d815aab": {
+        "Name": "Chloe",
+        "Age": "No age provided",
+        "Age in dog years": "N/A",
+        "Breed": "Golden Retriever",
+        "Fur type": "Short",
+        "Privacy": false
+    },
+    "e68b6e28-06cc-4364-ab1b-24262f93dbb8": {
+        "Name": "Lola",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Bichon Frise",
+        "Fur type": "Rough",
+        "Privacy": false
+    },
+    "2804a323-a56c-489c-9fb7-cafd94f52818": {
+        "Name": "Sam",
+        "Age": 12,
+        "Age in dog years": 84,
+        "Breed": "Labrador Retriever",
+        "Fur type": "Short",
+        "Privacy": false
+    },
+    "8fd7dde8-656d-4c09-aa8d-2889b80e6baa": {
+        "Name": "Lacey",
         "Age": 2,
         "Age in dog years": 14,
-        "Breed": "German shepherd",
+        "Breed": "German Shepherd",
+        "Fur type": "Silky",
+        "Privacy": false
+    },
+    "158303d2-fdac-4b66-a02f-5a5bce155d81": {
+        "Name": "Finn",
+        "Age": 7,
+        "Age in dog years": 49,
+        "Breed": "Bulldog",
+        "Fur type": "Long",
+        "Privacy": true
+    },
+    "88fef872-8c68-44ad-b511-cc64f1fe31bb": {
+        "Name": "Bear",
+        "Age": "No age provided",
+        "Age in dog years": "N/A",
+        "Breed": "Beagle",
+        "Fur type": "Silky",
+        "Privacy": false
+    },
+    "1dfc8fda-8407-4c9f-af41-82b8348d9bb3": {
+        "Name": "Sandy",
+        "Age": 3,
+        "Age in dog years": 21,
+        "Breed": "Australian Shepherd",
+        "Fur type": "Long",
+        "Privacy": false
+    },
+    "c3f125ea-9f73-4774-995a-9311c7b7a7fb": {
+        "Name": "Honey",
+        "Age": 7,
+        "Age in dog years": 49,
+        "Breed": "Yorkshire Terrier",
+        "Fur type": "Corded",
+        "Privacy": false
+    },
+    "3acc1ea1-c3be-481e-bef7-59bb390b0f13": {
+        "Name": "Angel",
+        "Age": 5,
+        "Age in dog years": 35,
+        "Breed": "Pug",
+        "Fur type": "Wiry",
+        "Privacy": false
+    },
+    "8e2d3e90-5082-4307-b553-a0da6ff1549e": {
+        "Name": "Lola",
+        "Age": 5,
+        "Age in dog years": 35,
+        "Breed": "Bichon Frise",
+        "Fur type": "Curly",
+        "Privacy": false
+    },
+    "53b8f44f-0728-4bdf-a614-4b0b63d99b20": {
+        "Name": "Willow",
+        "Age": 6,
+        "Age in dog years": 42,
+        "Breed": "Boxer",
+        "Fur type": "Corded",
+        "Privacy": true
+    },
+    "a6fdd885-f01b-44e6-8506-f2f3f73009de": {
+        "Name": "Murphy",
+        "Age": 3,
+        "Age in dog years": 21,
+        "Breed": "Bulldog",
+        "Fur type": "Long",
+        "Privacy": false
+    },
+    "9a44e970-2b4a-4eba-9b9a-78fd7139eefc": {
+        "Name": "Sophie",
+        "Age": 4,
+        "Age in dog years": 28,
+        "Breed": "Pug",
+        "Fur type": "Long",
+        "Privacy": false
+    },
+    "8e0915b8-d11b-4305-b648-76fd46cabf57": {
+        "Name": "Blue",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Great Dane",
+        "Fur type": "Wiry",
+        "Privacy": false
+    },
+    "289f44ce-7804-47fd-9333-13f3823023fd": {
+        "Name": "Marley",
+        "Age": 8,
+        "Age in dog years": 56,
+        "Breed": "Cavalier King Charles Spaniel",
+        "Fur type": "Double coat",
+        "Privacy": false
+    },
+    "d061ca83-8868-4e79-92d4-d5c7885d9b8c": {
+        "Name": "Ellie",
+        "Age": 3,
+        "Age in dog years": 21,
+        "Breed": "Yorkshire Terrier",
+        "Fur type": "Wiry",
+        "Privacy": false
+    },
+    "08f9960e-091f-4224-aa79-276e206d9eb2": {
+        "Name": "Hunter",
+        "Age": 3,
+        "Age in dog years": 21,
+        "Breed": "Yorkshire Terrier",
+        "Fur type": "Silky",
+        "Privacy": false
+    },
+    "f22e9e12-6087-4603-9868-9a04bfe9da02": {
+        "Name": "Mia",
+        "Age": 5,
+        "Age in dog years": 35,
+        "Breed": "Havanese",
+        "Fur type": "Hairless",
+        "Privacy": false
+    },
+    "e235bf54-5426-4ac2-9690-bf5e51e2a16f": {
+        "Name": "Chloe",
+        "Age": 5,
+        "Age in dog years": 35,
+        "Breed": "Pug",
+        "Fur type": "Corded",
+        "Privacy": false
+    },
+    "4d8f3fb2-01ec-4702-a87c-baa30dbee58d": {
+        "Name": "Ace",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Boston Terrier",
+        "Fur type": "Medium",
+        "Privacy": false
+    },
+    "192ccc4d-a347-4946-884e-a67874460b55": {
+        "Name": "Chewie",
+        "Age": 7,
+        "Age in dog years": 49,
+        "Breed": "Doberman Pinscher",
+        "Fur type": "Medium",
+        "Privacy": false
+    },
+    "047aee4f-34d8-4249-851e-a3eba8659e74": {
+        "Name": "Maggie",
+        "Age": 6,
+        "Age in dog years": 42,
+        "Breed": "Bichon Frise",
+        "Fur type": "Double coat",
+        "Privacy": false
+    },
+    "019aa75f-62de-4118-90c4-cfe74d124766": {
+        "Name": "Willow",
+        "Age": "No age provided",
+        "Age in dog years": "N/A",
+        "Breed": "Boston Terrier",
+        "Fur type": "Long",
+        "Privacy": false
+    },
+    "2a783f8d-526a-4b9f-9e30-c70d5fdc8f97": {
+        "Name": "Hunter",
+        "Age": 7,
+        "Age in dog years": 49,
+        "Breed": "Poodle",
+        "Fur type": "Rough",
+        "Privacy": false
+    },
+    "ea4f7528-7844-4c73-8219-114bf285c576": {
+        "Name": "Ruby",
+        "Age": 6,
+        "Age in dog years": 42,
+        "Breed": "Havanese",
+        "Fur type": "Long",
+        "Privacy": false
+    },
+    "4f1dff0a-581d-4dac-a1e7-ec449889352e": {
+        "Name": "Abby",
+        "Age": 4,
+        "Age in dog years": 28,
+        "Breed": "Great Dane",
+        "Fur type": "Curly",
+        "Privacy": false
+    },
+    "8e358124-78ac-48a2-9f02-354b2f9903fe": {
+        "Name": "Stella",
+        "Age": 16,
+        "Age in dog years": 112,
+        "Breed": "Dachshund",
+        "Fur type": "Long",
+        "Privacy": false
+    },
+    "db1c1899-2af8-41c4-8cd8-c427dca57f7e": {
+        "Name": "Abby",
+        "Age": 4,
+        "Age in dog years": 28,
+        "Breed": "Pug",
+        "Fur type": "Silky",
+        "Privacy": false
+    },
+    "207c2906-2aa0-455e-8f3b-3aa8807320d3": {
+        "Name": "Lacey",
+        "Age": 14,
+        "Age in dog years": 98,
+        "Breed": "Beagle",
         "Fur type": "Short",
+        "Privacy": false
+    },
+    "8ef7bc7e-37d7-4102-874e-25f98b1e1d37": {
+        "Name": "Blue",
+        "Age": 8,
+        "Age in dog years": 56,
+        "Breed": "Boxer",
+        "Fur type": "Hairless",
+        "Privacy": true
+    },
+    "3f446213-136f-4a8a-92c5-ca01587ef60f": {
+        "Name": "Chewie",
+        "Age": 6,
+        "Age in dog years": 42,
+        "Breed": "Dachshund",
+        "Fur type": "Hairless",
+        "Privacy": false
+    },
+    "49a4a4b2-71b1-4dbf-9b19-c5d5269f87e5": {
+        "Name": "Oscar",
+        "Age": 3,
+        "Age in dog years": 21,
+        "Breed": "Boxer",
+        "Fur type": "Medium",
+        "Privacy": true
+    },
+    "b3f503e2-a3a2-4cc0-aa81-df9c710456c2": {
+        "Name": "Ruby",
+        "Age": 4,
+        "Age in dog years": 28,
+        "Breed": "Shih Tzu",
+        "Fur type": "Silky",
+        "Privacy": false
+    },
+    "e3452edf-deef-466a-8c48-639e3747ad4b": {
+        "Name": "Luna",
+        "Age": 8,
+        "Age in dog years": 56,
+        "Breed": "Yorkshire Terrier",
+        "Fur type": "Rough",
+        "Privacy": false
+    },
+    "d5369404-692a-4e32-943d-b803417723e6": {
+        "Name": "Winnie",
+        "Age": 5,
+        "Age in dog years": 35,
+        "Breed": "Bulldog",
+        "Fur type": "Curly",
+        "Privacy": false
+    },
+    "2d1ec1d9-82a8-49ed-8167-f1e26ca19374": {
+        "Name": "Mia",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Havanese",
+        "Fur type": "Short",
+        "Privacy": true
+    },
+    "9562d565-3afb-44b1-ac88-0baaaf460191": {
+        "Name": "Dakota",
+        "Age": 6,
+        "Age in dog years": 42,
+        "Breed": "Pug",
+        "Fur type": "Short",
+        "Privacy": false
+    },
+    "3b6df164-3be9-4151-84d7-d643c0418a64": {
+        "Name": "Rusty",
+        "Age": 12,
+        "Age in dog years": 84,
+        "Breed": "Yorkshire Terrier",
+        "Fur type": "Short",
+        "Privacy": false
+    },
+    "f5497a4e-9e04-4422-b953-3a6abf8e0ef8": {
+        "Name": "Casey",
+        "Age": 10,
+        "Age in dog years": 70,
+        "Breed": "Great Dane",
+        "Fur type": "Rough",
+        "Privacy": false
+    },
+    "c9fc0e19-24f0-4f00-9d73-2fc576e7c688": {
+        "Name": "Lacey",
+        "Age": 12,
+        "Age in dog years": 84,
+        "Breed": "Labrador Retriever",
+        "Fur type": "Hairless",
+        "Privacy": false
+    },
+    "c9d4ee7b-fae9-4583-87bb-542452882e20": {
+        "Name": "Gus",
+        "Age": 8,
+        "Age in dog years": 56,
+        "Breed": "Dachshund",
+        "Fur type": "Long",
+        "Privacy": false
+    },
+    "824399fe-d525-49ac-b77e-27f44ed154d1": {
+        "Name": "Fido",
+        "Age": 5,
+        "Age in dog years": 35,
+        "Breed": "Dachshund",
+        "Fur type": "Rough",
+        "Privacy": false
+    },
+    "7f36dedd-01d0-4bae-a95d-2c093aa1da01": {
+        "Name": "Finn",
+        "Age": 8,
+        "Age in dog years": 56,
+        "Breed": "Pug",
+        "Fur type": "Curly",
+        "Privacy": false
+    },
+    "40da6594-22f3-402f-b553-7294455eb045": {
+        "Name": "Dixie",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Bichon Frise",
+        "Fur type": "Medium",
+        "Privacy": false
+    },
+    "925b779f-b7a6-471c-a749-6298523db775": {
+        "Name": "Buddy",
+        "Age": 1,
+        "Age in dog years": 7,
+        "Breed": "Bulldog",
+        "Fur type": "Curly",
+        "Privacy": false
+    },
+    "eecfc582-f0c6-4638-bbb2-ff6a20232e48": {
+        "Name": "Charlie",
+        "Age": 5,
+        "Age in dog years": 35,
+        "Breed": "Doberman Pinscher",
+        "Fur type": "Medium",
+        "Privacy": false
+    },
+    "c0ed718e-1eac-4f51-994d-689395090cb8": {
+        "Name": "Gracie",
+        "Age": 3,
+        "Age in dog years": 21,
+        "Breed": "Bichon Frise",
+        "Fur type": "Long",
         "Privacy": false
     }
 }
