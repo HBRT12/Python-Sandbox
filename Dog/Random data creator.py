@@ -1,18 +1,43 @@
 import json
 import random
+import uuid
 
+names = [
+    "Buddy", "Bella", "Charlie", "Lucy", "Max",
+    "Daisy", "Bailey", "Luna", "Cooper", "Molly",
+    "Rocky", "Sadie", "Bear", "Lola", "Duke",
+    "Zoey", "Toby", "Roxy", "Jack", "Maggie",
+    "Oliver", "Chloe", "Leo", "Sophie", "Finn",
+    "Ruby", "Oscar", "Rosie", "Jake", "Abby",
+    "Milo", "Gracie", "Bentley", "Lily", "Tucker",
+    "Penny", "Zeus", "Nala", "Sam", "Ellie",
+    "Gus", "Stella", "Shadow", "Coco", "Murphy",
+    "Loki", "Mia", "Thor", "Harley", "Willow",
+    "Henry", "Honey", "Dexter", "Ginger", "Riley",
+    "Bandit", "Sasha", "Marley", "Belle", "Hunter",
+    "Simba", "Dakota", "Blue", "Lacey", "Bruno",
+    "Jasper", "Maddie", "Ollie", "Casey", "Scout",
+    "Hank", "Pepper", "Archie", "Minnie", "Rusty",
+    "Winnie", "Apollo", "Cleo", "Shadow", "Lulu",
+    "King", "Angel", "Sammy", "Athena", "Bear",
+    "Rex", "Dixie", "Jake", "Layla", "Baxter",
+    "Sandy", "Moose", "Harper", "Ace", "Nikki",
+    "Brandy", "Boomer", "Gizmo", "Honey", "Tank",
+    "Chewie", "Cookie", "Rusty", "Fido", "Pepper"
+]
 
-names = ["Alfie", "Bruno", "Clover", "Dexter",
-         "Echo", "Finn", "Gus", "Hazel",
-         "Indie", "Jasper", "Koda", "Luna",
-         "Milo", "Nova", "Ollie", "Pepper",
-         "Quincy", "Rosie", "Scout", "Teddy",
-         "Uma", "Vinnie", "Willow", "Xander",
-         "Yuki", "Ziggy"]  # Possible names
 
 fur_types = ["Short", "Medium", "Long", "Curly",
              "Wiry", "Double coat", "Silky", "Rough",
              "Corded", "Hairless"]  # Possible fur types
+
+breeds = ["Labrador Retriever", "German Shepherd", "Golden Retriever",
+          "Bulldog", "Beagle", "Poodle", "Rottweiler",
+          "Yorkshire Terrier", "Boxer", "Dachshund",
+          "Siberian Husky", "Great Dane", "Doberman Pinscher",
+          "Australian Shepherd", "Cavalier King Charles Spaniel",
+          "Shih Tzu", "Boston Terrier", "Pug",
+          "Havanese", "Bichon Frise", "Mastiff"]  # Possible breeds
 
 def get_data_amount():
     try:
@@ -35,29 +60,32 @@ def confirmed():
 
 def create_sample_data():
     for i in range(10):
-        name = random.choice(names)
+        dog_id = str(uuid.uuid4())  # Generating unique ID
+        print(f"\nDog ID: {dog_id}")
+        
+        name = random.choice(names)  # Randomly selecting a name
         print(f"Name: {name}")
-
+        
         random_age = random.random()
         if random_age < 0.1:
-            age = "Not Provided"
+            age = "No age provided"
             age_dog_years = "N/A"
         elif random_age < 0.8:
-            age = random.randint(1, 8)
+            age = random.randint(1, 8)  # Randomly selecting an age with weighted probabilities
             age_dog_years = age * 7
         else:
-            age = random.randint(1,16)
+            age = random.randint(5,16)
             age_dog_years = age * 7
         print(f"Age: {age} ({age_dog_years} in dog years)")
-
+        
         random_privacy = random.random()
-
-        if random_privacy < 0.15:
+        if random_privacy < 0.1:  # 10% chance of being private
             privacy = True
         else:
             privacy = False
         print(f"Privacy: {privacy}")
-if confirmed():
-    create_sample_data()
+        print("\n" + "-" * 20)
 
-input("Press enter to exit...")
+if confirmed():
+    create_sample_data()  # Create sample data if user confirmed
+    input("Press enter to exit...")
