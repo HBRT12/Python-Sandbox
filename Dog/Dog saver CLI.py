@@ -1,6 +1,7 @@
 import json  # Needed for saving data
 import os
 import time
+import uuid
 
 try:
     with open("./Dog/Stored_dogs.json") as dogs:  # Imports data from JSON
@@ -13,7 +14,8 @@ except:
 time.sleep(1)
 
 def store_dog(dog_dict, dog_data):
-    dog_dict[dog_data[0]] = {"Age": dog_data[1],  # Adds user's dog information to imported dictionary
+    dog_dict[dog_data[6]] = {"Name": dog_data[0],
+                             "Age": dog_data[1],  # Adds user's dog information to imported dictionary
                              "Age in dog years": dog_data[2],
                              "Breed": dog_data[3],
                              "Fur type": dog_data[4],
@@ -31,21 +33,25 @@ def get_user_info():
     fur_type = input("What fur type does your dog have?>>> ")
     privacy = input("Do you want your data hidden when loaded?>>> ")
     if privacy.lower() in ["no", "nope", "n", "nah"]:  # Check if user doesn't want input hidden when loaded in Dog loader.py
-        return [dog_name.capitalize(), age, age_in_dog_years, breed.capitalize(), fur_type.capitalize(), False]
+        return [dog_name.capitalize(), age, age_in_dog_years, breed.capitalize(), fur_type.capitalize(), False, str(uuid.uuid4())]
     else:  # Returns True or False as last entry, depending on privacy input
-        return [dog_name.capitalize(), age, age_in_dog_years, breed.capitalize(), fur_type.capitalize(), True]
+        return [dog_name.capitalize(), age, age_in_dog_years, breed.capitalize(), fur_type.capitalize(), True, str(uuid.uuid4())]
 
 def upload_dog_data(dog_dict):
-    with open("./Dog/Stored_dogs.json","w") as dogs_file:  # Dumps dictionary with new entry to save file
-        json.dump(dog_dict, dogs_file, indent=4, sort_keys=True)
-
+    try:
+        with open("./Dog/Stored_dogs.json","w") as dogs_file:  # Dumps dictionary with new entry to save file
+            json.dump(dog_dict, dogs_file, indent=4)
+    except:
+        with open("Stored_dogs.json", "w") as dogs_file:
+            json.dump(dog_dict, dogs_file, indent=4)
 def display_info(user_info):
     os.system('cls' if os.name == 'nt' else 'clear')  # Clears terminal for better readability
     print(f"""Name: {user_info[0]}
     Age:{user_info[1]} (or {user_info[2]} in human years)
     Breed: {user_info[3]}
     Fur type: {user_info[4]}
-    Keep data private: {user_info[5]}""")  # For context to indexes, see lines 28/30
+    Keep data private: {user_info[5]}
+    Entry ID: {user_info[6]}""")  # For context to indexes, see lines 28/30
 
 user_inputs = get_user_info()  # Gets information from user
 store_dog(stored_dog_dict, user_inputs)  # Stores information onto the dictionary
