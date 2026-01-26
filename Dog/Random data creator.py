@@ -62,8 +62,12 @@ def confirmed():
 
 def store_data(dict):
     input("Press enter to overwrite stored_dogs.json with generated data...")
-    with open("./Dog/Stored_dogs.json", "w") as file:
-        json.dump(dict, file, indent=4)
+    try:
+        with open("./Dog/Stored_dogs.json", "w") as file:
+            json.dump(dict, file, indent=4)
+    except:
+        with open("Stored_dogs.json", "w") as file:
+            json.dump(dict, file, indent=4)
 
 def create_sample_data(entry_count, dict=sample_data):
     for i in range(entry_count):
