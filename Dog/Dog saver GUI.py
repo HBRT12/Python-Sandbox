@@ -46,22 +46,26 @@ def confirm_no(confirmwindow, rootwindow):  # If user selects no on confirmation
 
 def confirm_yes(confirmwindow, rootwindow, userinfo, database):  # If user selects yes on confirmation window
     confirmwindow.destroy()  # Close confirmation window
+    database[str(userinfo[6])] = {  # Adding new entry to database
+        "Name": userinfo[0],
+        "Age": userinfo[1],
+        "Age in dog years": userinfo[2],
+        "Breed": userinfo[3],
+        "Fur type": userinfo[4],
+        "Privacy": userinfo[5]
+    }
     try:
         with open("./Dog/Stored_dogs.json", "w") as file:
-            database[str(userinfo[6])] = {  # Adding new entry to database
-                "Name": userinfo[0],
-                "Age": userinfo[1],
-                "Age in dog years": userinfo[2],
-                "Breed": userinfo[3],
-                "Fur type": userinfo[4],
-                "Privacy": userinfo[5]
-            }
             json.dump(database, file, indent=4)  # Saving updated database
             messagebox.showinfo("Response saved!", f"Your response was saved successfully. You may now close the program or submit another response. Response ID: {userinfo[6]}")
             confirmwindow.destroy()
             rootwindow.deiconify()
-    except:
-        messagebox.showerror("Error: Failed to save", "The program has failed to upload your data. Your response hasn't been saved!")
+    except Exception as e:
+        with open("Stored_dogs.json", "w") as file:
+            json.dump(database, file, indent=4)  # Saving updated database
+            messagebox.showinfo("Response saved!", f"Your response was saved successfully. You may now close the program or submit another response. Response ID: {userinfo[6]}")
+            confirmwindow.destroy()
+            rootwindow.deiconify()
     
 root = tk.Tk()  # Defining root parameters
 root.config(bg="gray")
