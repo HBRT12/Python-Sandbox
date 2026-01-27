@@ -1,22 +1,28 @@
 import json  # Needed for loading data
 
-try:
-    with open("./Dog/Stored_dogs.json") as dogs:  # Imports data from JSON
-        stored_dog_dict = json.load(dogs)
-        print("Successfully loaded stored data from JSON file")
-except:
-    print("Error loading stored data from JSON file")
 
-def display_dog_info(dog_dict):
-    for each in stored_dog_dict:
-        if dog_dict[each]["Privacy"] is False:  # Checks if privacy is set to False
-            print(f"""Dog Name: {each}
-                Age: {dog_dict[each]['Age']}
-                Age in dog years: {dog_dict[each]['Age in dog years']}
-                Breed: {dog_dict[each]['Breed']}
-                Fur type: {dog_dict[each]['Fur type']}""")  # Displays each dog's information
-        else:
-            print(f"Dog Name: {each[0]}{'*'*(len(dog_dict[each])-1)} - Data is set to private and cannot be displayed.")  # Message if privacy is True
-        print("\n"+"-"*40+"\n")  # Formatting line between entries
+def get_data():
+    try:
+        with open("./Dog/Stored_dogs.json") as dogs:  # Imports data from JSON
+            stored_dog_dict = json.load(dogs)
+            print("Successfully loaded stored data from JSON file")
+    except:
+        with open("Stored_dogs.json") as dogs:
+            stored_dog_dict = json.load(dogs)
+            print("Successfully loaded stored data from JSON file")
+        return stored_dog_dict
 
-display_dog_info(stored_dog_dict)  # Calls function to display dog info
+def read_data():
+    entry_id = input("Please type the ID for the entry that you want to view>>> ")
+    if data[entry_id]['Privacy'] == False:
+        print(f"""Name: {data[entry_id]['Name']}
+        Age: {data[entry_id]['Age']}
+        Age in dog years: {data[entry_id]['Age in dog years']}
+        Breed: {data[entry_id]['Breed']}
+        Fur type: {data[entry_id]['Fur type']}""")
+    else:
+        print("This response cannot be displayed because it is either private or cannot be found")
+data = get_data()
+
+while True:
+    read_data()
