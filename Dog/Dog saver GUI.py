@@ -118,7 +118,7 @@ enter = tk.Button(root,
                                             dog_breed.get().capitalize(),
                                             dog_fur_type.get().capitalize(), 
                                             dog_privacy.get(),
-                                            uuid.uuid4()])).grid(row=5, column=1, pady=10)  # Submit button
+                                            str(uuid.uuid4())[:8]])).grid(row=5, column=1, pady=10)  # Submit button
 
 dog_data = get_database()
 root.mainloop()

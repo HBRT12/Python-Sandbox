@@ -71,7 +71,7 @@ def store_data(dict):
 
 def create_sample_data(entry_count, dict=sample_data):
     for i in range(entry_count):
-        dog_id = str(uuid.uuid4())  # Generating unique ID
+        dog_id = str(uuid.uuid4())[:8]  # Generating unique ID
         print(f"\nDog ID: {dog_id}")
         
         name = random.choice(names)  # Randomly selecting a name

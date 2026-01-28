@@ -33,9 +33,9 @@ def get_user_info():
     fur_type = input("What fur type does your dog have?>>> ")
     privacy = input("Do you want your data hidden when loaded?>>> ")
     if privacy.lower() in ["no", "nope", "n", "nah"]:  # Check if user doesn't want input hidden when loaded in Dog loader.py
-        return [dog_name.capitalize(), age, age_in_dog_years, breed.capitalize(), fur_type.capitalize(), False, str(uuid.uuid4())]
+        return [dog_name.capitalize(), age, age_in_dog_years, breed.capitalize(), fur_type.capitalize(), False, str(uuid.uuid4())[:8]]
     else:  # Returns True or False as last entry, depending on privacy input
-        return [dog_name.capitalize(), age, age_in_dog_years, breed.capitalize(), fur_type.capitalize(), True, str(uuid.uuid4())]
+        return [dog_name.capitalize(), age, age_in_dog_years, breed.capitalize(), fur_type.capitalize(), True, str(uuid.uuid4())[:8]]
 
 def upload_dog_data(dog_dict):
     try:
