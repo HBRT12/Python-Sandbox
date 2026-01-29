@@ -31,6 +31,7 @@ Fur type: {data[entry_id]['Fur type']}""")
 data = get_database()
 
 root = tk.Tk()
+root.config(bg="gray")
 root.title("Dog Loader GUI")
 root.geometry("400x200")
 entry_id_label = tk.Label(root, text="Enter Dog Entry ID:")
