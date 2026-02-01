@@ -1,32 +1,27 @@
-uppercase_count=0
-lowercase_count=0
-symbol_count=0
-number_count=0
-password = input('Please type a password for the strength checker>>> ')
-for char in password:
-    uppercase=False
-    lowercase=False
-    number=False
-    symbol=False
-    if char.upper() == char:
-        uppercase=True
-    if char.lower() == char: # Determines if the character is upper/lower case
-        lowercase=True
-    try:
-        char=int(char) # Tries to convert string number to integer to
-        number=True    # confirm that there is a number
-    except:
-        pass
-    if number == True:
-        number_count+=1
-        print('number')
-    elif uppercase == True and lowercase == True:
-        symbol_count+=1
-        print('symbol')
-    else:
-        if uppercase == True:
-            uppercase_count+=1
-            print('upper')
-        elif lowercase == True:
-            lowercase_count+=1
-            print('lower')
+import re
+
+password = input("Enter your password to check its strength: ")  # User inputs the password to be checked
+
+def check_password_strength(pw=password):
+    length_error = len(pw) < 8
+    digit_error = re.search(r"\d", pw) is None  # Check for at least one digit
+    uppercase_error = re.search(r"[A-Z]", pw) is None # Check for at least one uppercase letter
+    lowercase_error = re.search(r"[a-z]", pw) is None  # Check for at least one lowercase letter
+    symbol_error = re.search(r"[ @!#$%^&*()<>?/\\|}{~:]", pw) is None  # Check for at least one special character
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Reporting the results~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+    if length_error:
+        print("Password must be at least 8 characters long.")
+    if digit_error:
+        print("Password must include at least one digit.")
+    if uppercase_error:
+        print("Password must include at least one uppercase letter.")
+    if lowercase_error:
+        print("Password must include at least one lowercase letter.")
+    if symbol_error:
+        print("Password must include at least one special character.")
+
+    if not (length_error or digit_error or uppercase_error or lowercase_error or symbol_error):
+        print("Password is strong.")  # All criteria met
+
+check_password_strength()
