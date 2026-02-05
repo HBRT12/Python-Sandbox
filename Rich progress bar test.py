@@ -1,4 +1,4 @@
-from rich.progress import Progress
+from rich.progress import Progress  # pip install rich
 import time as t
 with Progress() as progress:
     bar_1 = progress.add_task('[red]Loading[yellow]...', total=None)
