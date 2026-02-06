@@ -1,6 +1,7 @@
 import re
+import getpass
 
-password = input("Enter your password to check its strength: ")  # User inputs the password to be checked
+password = getpass.getpass("Enter your password to check its strength: ")  # User inputs the password to be checked
 
 def check_password_strength(pw=password):
     length_error = len(pw) < 8
