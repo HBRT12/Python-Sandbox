@@ -10,6 +10,7 @@ screen.title("Turtle Scramble")
 NUM_TURTLES = 10
 STEPS = 50
 COLORS = ["red", "green", "blue", "yellow", "purple", "orange", "cyan", "magenta", "lime", "white"]
+RANDOM_EVERY_STEP = True
 
 # Create turtles
 turtles = []
@@ -28,6 +29,8 @@ while True:
         angle = random.randint(0, 360)
         distance = random.randint(20, 100)
         t.setheading(angle)
+        if RANDOM_EVERY_STEP:
+            t.color(random.choice(COLORS))
         t.forward(distance)
         t.speed(0)
 
