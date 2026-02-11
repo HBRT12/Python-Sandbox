@@ -1,11 +1,11 @@
-from turtle import *
-import tkinter as tk
-import random
+from turtle import *  # Needed for graphics
+import tkinter as tk  # Needed for controller
 
 bgcolor("white")
 color("black")
-setheading(90)
+setheading(90)  # Setting up screen and turtle
 speed("normal")
+
 def f5():
     forward(5)
 def f10():
@@ -22,7 +22,7 @@ def pd():
     pendown()
 def pu():
     penup()
-def resetangle():
+def resetangle():  # Setting up functions
     setheading(90)
 def l5():
     left(5)
@@ -98,6 +98,8 @@ def toggle_vis():
         hideturtle()
     else:
         showturtle()
+
+#~~~~~~~~~~SETTING UP UI~~~~~~~~~~#
 root=tk.Tk()
 f3=tk.Button(root,
              text="Forward\n50",
@@ -331,6 +333,3 @@ watermark=tk.Button(root,
              font=("calibri",10))
 watermark.grid(row=6, column=6)
 root.mainloop()
-
-#toggle pen animation
-#
