@@ -17,7 +17,7 @@ turtles = []
 for i in range(NUM_TURTLES):
     t = turtle.Turtle()
     t.shape("turtle")
-    t.color(random.choice(COLORS))
+    t.color(random.randint(0, 0xFFFFFF))
     t.penup()
     t.goto(random.randint(-200, 200), random.randint(-200, 200))
     t.pendown()
@@ -30,7 +30,7 @@ while True:
         distance = random.randint(20, 100)
         t.setheading(angle)
         if RANDOM_EVERY_STEP:
-            t.color(random.choice(COLORS))
+            t.color(random.randint(0, 0xFFFFFF))
         t.forward(distance)
         t.speed(0)
 
