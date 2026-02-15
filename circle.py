@@ -6,7 +6,7 @@ s=turtle.Screen()
 s.bgcolor("white")  # Setting colours for bg and line
 t.color("black")
 
-for i in range(360):
+for i in range(360):  # Draws circle
     t.forward(1)
     t.left(1)
 
