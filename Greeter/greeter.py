@@ -5,6 +5,8 @@ def main(name):
         print(f"hello, Hubert. Welcome back to your coding sandbox!")
     else:
         print(f"Hello, {name}. Welcome to this Python program")
+    file = open("name_history.txt","a")
+    file.write(name)
 
 name_var = input("Please enter your name")
 
