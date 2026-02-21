@@ -1,0 +1,1 @@
+names = open("name_history.txt","r")
