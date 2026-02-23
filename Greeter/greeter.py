@@ -10,7 +10,7 @@ def main(name):
         file = open("./Greeter/name_history.txt","a")
     except:
         file = open("name_history.txt","a")  # Create the file if it doesn't exist
-    file.write(name + "\n")
+    file.write(f"{name}\n".capitalize())  # Write the name to the file with a newline
     file.close()
 
 name_var = input("Please enter your name")
