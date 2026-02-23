@@ -5,8 +5,13 @@ def main(name):
         print(f"hello, Hubert. Welcome back to your coding sandbox!")
     else:
         print(f"Hello, {name}. Welcome to this Python program")
-    file = open("name_history.txt","a")
-    file.write(name)
+    
+    try:
+        file = open("./Greeter/name_history.txt","a")
+    except:
+        file = open("name_history.txt","a")  # Create the file if it doesn't exist
+    file.write(name + "\n")
+    file.close()
 
 name_var = input("Please enter your name")
 
