@@ -1,4 +1,4 @@
-import tkinter as tk
+import tkinter as tk  # needed for GUI
 from functools import partial
 
 def load_questions(filename):
